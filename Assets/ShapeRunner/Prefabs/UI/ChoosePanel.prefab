@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 5882193581768044351}
   - component: {fileID: 5882193581768044348}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,6 @@ GameObject:
   - component: {fileID: 5882193581854364597}
   - component: {fileID: 5882193581854364586}
   - component: {fileID: 5882193581854364587}
-  - component: {fileID: -7620973104191678819}
   m_Layer: 5
   m_Name: ChoosePanel
   m_TagString: Untagged
@@ -381,20 +380,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &-7620973104191678819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5882193581854364585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe4a6507020dfd49bc08bf89330a1b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _previous: {fileID: 5882193581330983045}
-  _next: {fileID: 5882193582428365935}
 --- !u!1 &5882193582428365933
 GameObject:
   m_ObjectHideFlags: 0

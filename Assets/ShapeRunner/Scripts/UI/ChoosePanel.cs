@@ -3,13 +3,14 @@ using UnityEngine.UI;
 
 namespace ShapeRunner.UI
 {
-    public class ChoosePanel : MonoBehaviour
+    public abstract class ChoosePanel : MonoBehaviour
     {
         [SerializeField]
         private Button _previous;
-        
         [SerializeField]
         private Button _next;
+        [SerializeField]
+        private Text _label;
 
         private void OnEnable()
         {
@@ -23,14 +24,12 @@ namespace ShapeRunner.UI
             _next.RemoveListener(SwitchToNext);
         }
 
-        private void SwitchToPrevious()
+        protected void SetLabel(string text)
         {
-            Debug.Log("ChoosePanel : previous");
+            _label.text = text;
         }
 
-        private void SwitchToNext()
-        {
-            Debug.Log("ChoosePanel : next");
-        }
+        protected abstract void SwitchToPrevious();
+        protected abstract void SwitchToNext();
     }
 }
