@@ -1,8 +1,11 @@
 using ShapeRunner.Character;
 using ShapeRunner.World;
 
-public static class LoadingData
+namespace ShapeRunner.Settings
 {
-    public static CharacterConfig CharacterConfig;
-    public static WorldConfig WorldConfig;
+    public static class LoadingData
+    {
+        public static CharacterConfig CharacterConfig;
+        public static WorldConfig WorldConfig;
+    }
 }
