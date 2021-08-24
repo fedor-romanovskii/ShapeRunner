@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea8b8a9de999626438a7564200d3b74f, type: 3}
-  m_Name: SquareCharacterConfig
+  m_Name: Square
   m_EditorClassIdentifier: 
   _shape: 0
