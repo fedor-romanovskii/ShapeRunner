@@ -7,12 +7,12 @@ namespace ShapeRunner.UI
     {
         public static void AddListener(this Button button, UnityAction call)
         {
-            button.AddListener(call);
+            button.onClick.AddListener(call);
         }
 
         public static void RemoveListener(this Button button, UnityAction call)
         {
-            button.RemoveListener(call);
+            button.onClick.RemoveListener(call);
         }
     }
 }
