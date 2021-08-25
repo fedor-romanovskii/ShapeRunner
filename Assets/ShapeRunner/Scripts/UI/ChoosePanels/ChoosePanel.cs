@@ -3,8 +3,7 @@ using UnityEngine.UI;
 
 namespace ShapeRunner.UI
 {
-    public abstract class ChoosePanel<TContainer, TConfig> : MonoBehaviour
-        where TContainer : IConfigContainer<TConfig>
+    public abstract class ChoosePanel<TConfig> : MonoBehaviour
         where TConfig : ScriptableObject
     {
         [SerializeField]
@@ -14,7 +13,7 @@ namespace ShapeRunner.UI
         [SerializeField]
         private Text _label;
         [SerializeField]
-        private TContainer _container;
+        private ConfigContainer<TConfig> _container;
 
         private int _choosenConfigIndex;
 

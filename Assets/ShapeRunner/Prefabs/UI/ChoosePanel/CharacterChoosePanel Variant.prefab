@@ -15,7 +15,7 @@ MonoBehaviour:
   _previous: {fileID: 3553746528523111750}
   _next: {fileID: 3553746529515504044}
   _label: {fileID: 3553746528019991295}
-  _container: {fileID: 11400000, guid: 19afaac1b4e5d8b458d0c53113bdfeec, type: 2}
+  _container: {fileID: 11400000, guid: 695f172ccb350ad459c2d0152dac7eab, type: 2}
 --- !u!1001 &6985309823121565123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5882193581854364585, guid: b2e7e19ecbed4214883a064303fc16d6, type: 3}
       propertyPath: m_Name
-      value: CharacterChoosePanel
+      value: CharacterChoosePanel Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5882193582428365932, guid: b2e7e19ecbed4214883a064303fc16d6, type: 3}
       propertyPath: m_AnchorMax.y
