@@ -1,4 +1,5 @@
 using ShapeRunner.Game.Services;
+using ShapeRunner.Settings;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,7 @@ namespace ShapeRunner.Game
         private void Awake()
         {
             RegisterChildServices();
+            RegisterServices();
             DontDestroyOnLoad(this);
             LoadNextScene();
         }
@@ -22,6 +24,11 @@ namespace ShapeRunner.Game
                 var type = service.GetType();
                 ServiceContainer.Instance.RegisterAsSingle(service);
             }
+        }
+
+        private void RegisterServices()
+        {
+            ServiceContainer.Instance.RegisterAsSingle(new LoadingData());
         }
 
         private void LoadNextScene()

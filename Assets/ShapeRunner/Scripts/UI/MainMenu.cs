@@ -1,3 +1,4 @@
+using ShapeRunner.Game.Services;
 using ShapeRunner.Settings;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,13 @@ namespace ShapeRunner.UI
         private WorldChoosePanel _worldChoosePanel;
         [SerializeField]
         private CharacterChoosePanel _characterChoosePanel;
+
+        private LoadingData _loadingData;
+
+        private void Awake()
+        {
+            _loadingData = ServiceContainer.Instance.GetSingle<LoadingData>();
+        }
 
         private void OnEnable()
         {
@@ -35,8 +43,8 @@ namespace ShapeRunner.UI
 
         private void SetupLoadingData()
         {
-            LoadingData.CharacterConfig = _characterChoosePanel.Config;
-            LoadingData.WorldConfig = _worldChoosePanel.Config;
+            _loadingData.CharacterConfig = _characterChoosePanel.Config;
+            _loadingData.WorldConfig = _worldChoosePanel.Config;
         }
     }
 }

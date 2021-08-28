@@ -1,11 +1,12 @@
 using ShapeRunner.Character;
+using ShapeRunner.Game.Services;
 using ShapeRunner.World;
 
 namespace ShapeRunner.Settings
 {
-    public static class LoadingData
+    public class LoadingData : IService
     {
-        public static CharacterConfig CharacterConfig;
-        public static WorldConfig WorldConfig;
+        public CharacterConfig CharacterConfig;
+        public WorldConfig WorldConfig;
     }
 }
