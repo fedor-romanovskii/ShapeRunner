@@ -36,7 +36,6 @@ namespace ShapeRunner.UI
 
         private void Play()
         {
-            Debug.Log("MainMenu : Play");
             SetupLoadingData();
             SceneManager.LoadScene(GameSceneName);
         }
