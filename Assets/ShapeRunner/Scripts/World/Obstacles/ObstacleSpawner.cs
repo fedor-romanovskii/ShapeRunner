@@ -1,6 +1,8 @@
+using UnityEngine;
+
 namespace ShapeRunner.World
 {
-    public class ObstacleSpawner
+    public class ObstacleSpawner : MonoBehaviour
     {
         private Obstacle[] _obstacles;
 
