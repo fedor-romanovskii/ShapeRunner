@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3eb5c31fc367f4788e71e57e8ec955, type: 3}
   m_Name: Earth
   m_EditorClassIdentifier: 
-  _background: {r: 0.4, g: 1, b: 1, a: 0}
-  _obstacles: []
+  _background: {r: 0.4, g: 1, b: 1, a: 1}
+  _obstacles:
+  - {fileID: 744384532984939859, guid: 6774698982347244e95daf6eec201037, type: 3}
   _gravity: 9.8

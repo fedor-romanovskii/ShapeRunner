@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3eb5c31fc367f4788e71e57e8ec955, type: 3}
   m_Name: Mars
   m_EditorClassIdentifier: 
-  _background: {r: 1, g: 0.65, b: 0.39999998, a: 0}
-  _obstacles: []
+  _background: {r: 1, g: 0.65, b: 0.39999998, a: 1}
+  _obstacles:
+  - {fileID: 744384532984939859, guid: 6774698982347244e95daf6eec201037, type: 3}
+  - {fileID: 744384532984939859, guid: d83e70d3637d09e49a49e9d6e7ebcac0, type: 3}
   _gravity: 3.7
