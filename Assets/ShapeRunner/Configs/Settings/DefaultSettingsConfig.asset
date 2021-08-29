@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DefaultSettingsConfig
   m_EditorClassIdentifier: 
   _maxSpeed: 10
-  _acceleration: 1
+  _acceleration: 0.5
   _minSpawnRange: 1
   _maxSpawnRange: 3
