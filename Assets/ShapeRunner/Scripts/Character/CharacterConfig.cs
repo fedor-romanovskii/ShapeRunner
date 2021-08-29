@@ -1,4 +1,4 @@
-using ShapeRunner.Character.Accelerator;
+using ShapeRunner.Accelerator;
 using UnityEngine;
 
 namespace ShapeRunner.Character

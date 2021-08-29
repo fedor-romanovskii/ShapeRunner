@@ -215,6 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392706302}
+  - component: {fileID: 392706303}
   m_Layer: 0
   m_Name: PlayerPoint
   m_TagString: Untagged
@@ -236,6 +237,20 @@ Transform:
   m_Father: {fileID: 1081918047}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392706303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392706301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78425b1341c71804ea6c3cec18bb4c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerPoint: {fileID: 392706302}
+  _prefab: {fileID: -2730037477746232763, guid: e35948a2ee389ff43846a8f8b7517419, type: 3}
 --- !u!1 &1041436748
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1081918047}
   - component: {fileID: 1081918048}
+  - component: {fileID: 1081918049}
   m_Layer: 0
   m_Name: Enviroment
   m_TagString: Untagged
@@ -367,6 +383,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _background: {fileID: 1911730947}
   _obstacleSpawner: {fileID: 1483308826}
+--- !u!114 &1081918049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081918046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78425b1341c71804ea6c3cec18bb4c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerPoint: {fileID: 392706302}
+  _prefab: {fileID: -2730037477746232763, guid: e35948a2ee389ff43846a8f8b7517419, type: 3}
 --- !u!1 &1483308824
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1483308825}
   - component: {fileID: 1483308826}
+  - component: {fileID: 1483308827}
   m_Layer: 0
   m_Name: ObstacleSpawner
   m_TagString: Untagged
@@ -410,6 +441,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a477d8e83ad5c5246a631dcfd8d75288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1483308827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483308824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b571b4bfafde4654c8b5dd0f08940f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _removePositionX: -15
+  _obstacleSpawner: {fileID: 1483308826}
 --- !u!1 &1911730945
 GameObject:
   m_ObjectHideFlags: 0

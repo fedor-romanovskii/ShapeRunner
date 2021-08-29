@@ -10,6 +10,11 @@ namespace ShapeRunner.World
 
         public List<Obstacle> ActiveObstacles { get; private set; }
 
+        private void Awake()
+        {
+            ActiveObstacles = new List<Obstacle>();
+        }
+
         public void SetupPrefabs(Obstacle[] obstacles)
         {
             _obstacles = obstacles;

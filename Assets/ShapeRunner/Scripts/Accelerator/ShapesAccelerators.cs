@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using ShapeRunner.Character.Accelerator;
+using ShapeRunner.Character;
 
-namespace ShapeRunner.Character
+namespace ShapeRunner.Accelerator
 {
     public static class ShapesAccelerators
     {
