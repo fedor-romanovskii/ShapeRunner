@@ -1,4 +1,5 @@
 using ShapeRunner.Game.Services;
+using ShapeRunner.Input;
 using ShapeRunner.Settings;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,11 @@ namespace ShapeRunner.Game
     public class Bootstrap : MonoBehaviour
     {
         private const string NextScene = "MainMenu";
+
+        [SerializeField]
+        private UserInput _userInput;
+        [SerializeField]
+        private SettingsProvider _settingsProvider;
 
         private void Awake()
         {
@@ -19,11 +25,8 @@ namespace ShapeRunner.Game
 
         private void RegisterChildServices()
         {
-            foreach (var service in GetComponentsInChildren<IService>())
-            {
-                var type = service.GetType();
-                ServiceContainer.Instance.RegisterAsSingle(service);
-            }
+            ServiceContainer.Instance.RegisterAsSingle<IInput>(_userInput);
+            ServiceContainer.Instance.RegisterAsSingle(_settingsProvider);
         }
 
         private void RegisterServices()

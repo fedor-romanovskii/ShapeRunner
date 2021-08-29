@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace ShapeRunner.World
     {
         private Obstacle[] _obstacles;
         private ObjectPool<Obstacle>[] _pools;
+        private Coroutine _spawnRoutine;
 
         public List<Obstacle> ActiveObstacles { get; private set; }
 
@@ -21,7 +23,26 @@ namespace ShapeRunner.World
             InitializePools();
         }
 
-        public void SpawnRandomObstacle()
+        public void StartSpawning(float minTime, float maxTime)
+        {
+            if (_spawnRoutine !=null)
+            {
+                StopCoroutine(_spawnRoutine);
+            }
+            _spawnRoutine = StartCoroutine(SpawnRoutine(minTime, maxTime));
+        }
+
+        private IEnumerator SpawnRoutine(float minTime, float maxTime)
+        {
+            while(true)
+            {
+                var delay = Random.Range(minTime, maxTime);
+                yield return new WaitForSeconds(delay);
+                SpawnRandomObstacle();
+            }
+        }
+
+        private void SpawnRandomObstacle()
         {
             var randomPoolIndex = Random.Range(0, _pools.Length);
             var spawnedObstacle = _pools[randomPoolIndex].GetFreeElement();

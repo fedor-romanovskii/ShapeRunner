@@ -1,4 +1,5 @@
 using ShapeRunner.Game.Services;
+using ShapeRunner.Input;
 using ShapeRunner.Settings;
 using UnityEngine;
 
@@ -14,13 +15,16 @@ namespace ShapeRunner.Character
         private void Awake()
         {
             var loadingData = ServiceContainer.Instance.GetSingle<LoadingData>();
-            CreatePlayer(loadingData.CharacterConfig);
+            var input = ServiceContainer.Instance.GetSingle<IInput>();
+            var settings = ServiceContainer.Instance.GetSingle<SettingsProvider>();
+            CreatePlayer(loadingData.CharacterConfig, input);
+            loadingData.CharacterConfig.Accelerator.Setup(settings.Config.MaxSpeed, settings.Config.Acceleration);
         }
 
-        private void CreatePlayer(CharacterConfig characterConfig)
+        private void CreatePlayer(CharacterConfig characterConfig, IInput input)
         {
             var charater = Instantiate(_prefab, _playerPoint.position, Quaternion.identity);
-            charater.Setup(characterConfig.Accelerator);
+            charater.Setup(characterConfig.Accelerator, input);
         }
     }
 }

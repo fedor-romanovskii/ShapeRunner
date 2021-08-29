@@ -215,7 +215,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392706302}
-  - component: {fileID: 392706303}
   m_Layer: 0
   m_Name: PlayerPoint
   m_TagString: Untagged
@@ -237,20 +236,6 @@ Transform:
   m_Father: {fileID: 1081918047}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &392706303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392706301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78425b1341c71804ea6c3cec18bb4c81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerPoint: {fileID: 392706302}
-  _prefab: {fileID: -2730037477746232763, guid: e35948a2ee389ff43846a8f8b7517419, type: 3}
 --- !u!1 &1041436748
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _background: {fileID: 1911730947}
   _obstacleSpawner: {fileID: 1483308826}
+  _mover: {fileID: 1483308827}
 --- !u!114 &1081918049
 MonoBehaviour:
   m_ObjectHideFlags: 0
