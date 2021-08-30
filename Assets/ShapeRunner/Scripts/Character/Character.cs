@@ -10,6 +10,8 @@ namespace ShapeRunner.Character
         private SpriteRenderer _renderer;
         [SerializeField]
         private Jumper _jumper;
+        [SerializeField]
+        private ColorChanger _colorChanger;
 
         private IInput _input;
         private IAccelerator _accelerator;
@@ -39,6 +41,7 @@ namespace ShapeRunner.Character
         private void OnJump()
         {
             _jumper.Jump();
+            _colorChanger.ChangeToRandomColor();
         }
     }
 }
