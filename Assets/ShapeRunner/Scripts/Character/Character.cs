@@ -1,5 +1,4 @@
 using ShapeRunner.Accelerator;
-using ShapeRunner.Game.Services;
 using ShapeRunner.Input;
 using UnityEngine;
 
@@ -7,6 +6,11 @@ namespace ShapeRunner.Character
 {
     public class Character : MonoBehaviour
     {
+        [SerializeField]
+        private SpriteRenderer _renderer;
+        [SerializeField]
+        private Jumper _jumper;
+
         private IInput _input;
         private IAccelerator _accelerator;
 
@@ -25,15 +29,16 @@ namespace ShapeRunner.Character
             _accelerator.Increase(Time.deltaTime);
         }
 
-        public void Setup(IAccelerator accelerator, IInput input)
+        public void Setup(IAccelerator accelerator, IInput input, Sprite shapePicture)
         {
             _accelerator = accelerator;
             _input = input;
+            _renderer.sprite = shapePicture;
         }
 
         private void OnJump()
         {
-            Debug.Log("Character : Jump");
+            _jumper.Jump();
         }
     }
 }

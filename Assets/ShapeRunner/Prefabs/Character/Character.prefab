@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5998859550007602019}
   - component: {fileID: 2298783744469889995}
   - component: {fileID: -2730037477746232763}
+  - component: {fileID: 1725895978373908596}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c7484be501073d49beee5d259c28f61, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a72578a1e6f4dc04db03ffd8e18f8863, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,3 +96,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29801da12e78f74d95b935cf1ce23f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _renderer: {fileID: 2298783744469889995}
+  _jumper: {fileID: 1725895978373908596}
+--- !u!114 &1725895978373908596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6066217948751158078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfb5c49790a64a41ae809a101d2315e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trajectory:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 5.03711
+      outSlope: 5.03711
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.3975611
+    - serializedVersion: 3
+      time: 2.5
+      value: 4
+      inSlope: 0.018006153
+      outSlope: 0.018006153
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14211512
+    - serializedVersion: 3
+      time: 5
+      value: 0
+      inSlope: -4.9684353
+      outSlope: -4.9684353
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.40191758
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _body: {fileID: 5998859550007602019}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c275a0a4405aba8448a4989e7c0a01b0, type: 3}
   m_Name: DefaultSettingsConfig
   m_EditorClassIdentifier: 
-  _maxSpeed: 10
-  _acceleration: 0.5
+  _maxSpeed: 15
+  _acceleration: 1
   _minSpawnRange: 1
   _maxSpawnRange: 3

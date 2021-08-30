@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Round
   m_EditorClassIdentifier: 
   _shape: 1
+  _sprite: {fileID: 21300000, guid: 1ef483260226fbc44a1f48b024cd38bd, type: 3}

@@ -6,7 +6,7 @@ namespace ShapeRunner.Settings
     public class SettingsConfig : ScriptableObject
     {
         [SerializeField]
-        [Range(1f, 10f)]
+        [Range(1f, 30f)]
         private float _maxSpeed;
 
         [SerializeField]

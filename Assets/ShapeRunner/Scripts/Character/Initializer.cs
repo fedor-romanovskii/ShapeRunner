@@ -24,7 +24,9 @@ namespace ShapeRunner.Character
         private void CreatePlayer(CharacterConfig characterConfig, IInput input)
         {
             var charater = Instantiate(_prefab, _playerPoint.position, Quaternion.identity);
-            charater.Setup(characterConfig.Accelerator, input);
+            _playerPoint.SetParent(charater.transform);
+            _playerPoint.localPosition += Vector3.up * .5f;
+            charater.Setup(characterConfig.Accelerator, input, characterConfig.Sprite);
         }
     }
 }
